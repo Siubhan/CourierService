@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0"
+      prefWidth="450.0" style="-fx-background-color: #ABCDEF;" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="AuthorControl">
+   <AnchorPane layoutY="100.0" prefHeight="217.0" prefWidth="463.0" style="-fx-background-color: #FFFFFF;">
+      <cursor>
+         <Cursor fx:constant="DEFAULT"/>
+      </cursor>
+      <Button fx:id="enterSys" layoutX="342.0" layoutY="137.0" mnemonicParsing="false" prefHeight="48.0"
+              prefWidth="97.0"
+              style="-fx-background-color: #D0F0C0; -fx-border-color: #D0F0C0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-style: solid; -fx-border-width: 4;"
+              text="Вхід" textFill="#596455">
+         <font>
+            <Font name="Bookman Old Style" size="14.0"/>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Button>
+      <TextField fx:id="logField" layoutX="208.0" layoutY="29.0" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font name="Bookman Old Style" size="15.0"/>
+         </font>
+      </TextField>
+      <PasswordField fx:id="passField" layoutX="208.0" layoutY="74.0" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font name="Bookman Old Style" size="15.0"/>
+         </font>
+      </PasswordField>
+      <Label layoutX="86.0" layoutY="32.0" prefHeight="23.0" prefWidth="54.0" text="Логін" textFill="#3c4d5b">
+         <font>
+            <Font name="Bookman Old Style" size="20.0"/>
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="77.0" text="Пароль" textFill="#3c4d5b">
+         <font>
+            <Font name="Bookman Old Style" size="20.0"/>
+         </font>
+      </Label>
+      <Button fx:id="newUser" layoutX="15.0" layoutY="137.0" mnemonicParsing="false" prefHeight="46.0"
+              prefWidth="200.0"
+              style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+              text="Створити користувача" textFill="#596468">
+         <font>
+            <Font name="Bookman Old Style" size="14.0"/>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Button>
+   </AnchorPane>
+   <Label layoutX="79.0" layoutY="-35.0" prefHeight="170.0" prefWidth="363.0" text="Courier service &quot;Von&quot;"
+          textAlignment="CENTER" textFill="#3c4d5b">
+      <font>
+         <Font name="Norse" size="50.0"/>
+      </font>
+   </Label>
+</Pane>

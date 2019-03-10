@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="1000.0" style="-fx-background-color: #ABCDEF;" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReqControl">
+    <AnchorPane layoutX="-1.0" layoutY="95.0" prefHeight="530.0" prefWidth="1043.0"
+                style="-fx-background-color: #FFFFFF;">
+        <Button fx:id="back" layoutX="32.0" layoutY="441.0" mnemonicParsing="false"
+                style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                text="Відмінити" textFill="#596468">
+            <font>
+                <Font name="Bookman Old Style" size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="sendReq" layoutX="867.0" layoutY="441.0" mnemonicParsing="false"
+                style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                text="Надіслати" textFill="#596468">
+            <font>
+                <Font name="Bookman Old Style" size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="toCalc" layoutX="388.0" layoutY="441.0" mnemonicParsing="false"
+                style="-fx-background-color: #D0F0C0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #D0F0C0;"
+                text="Розрахувати вартість доставки" textFill="#596455">
+            <font>
+                <Font name="Bookman Old Style" size="16.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="nameDest" layoutX="786.0" layoutY="105.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="indexSender" layoutX="275.0" layoutY="185.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="addressSender" layoutX="275.0" layoutY="145.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="nameSender" layoutX="275.0" layoutY="105.0" prefWidth="175.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="phoneDest" layoutX="787.0" layoutY="225.0" prefWidth="176.0" promptText="+380_________">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="phoneSender" layoutX="275.0" layoutY="225.0" prefWidth="176.0" promptText="+380_________">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="indexDest" layoutX="786.0" layoutY="185.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="addressDest" layoutX="787.0" layoutY="145.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="vaga" layoutX="275.0" layoutY="265.0" prefWidth="176.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="shirina" layoutX="401.0" layoutY="305.0" prefWidth="50.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="dovzhina" layoutX="338.0" layoutY="305.0" prefWidth="50.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="visota" layoutX="275.0" layoutY="305.0" prefWidth="50.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <Label layoutX="32.0" layoutY="108.0" text="П.І.Б відправника" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="150.0" text="Адреса отримувача" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="110.0" text="П.І.Б отримувача" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="230.0" text="Тел. номер отримувача" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="228.0" text="Тел. номер відправника" textAlignment="CENTER"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="148.0" text="Адреса відправника" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="273.0" text="Спосіб оплати" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="316.0" text="Спосіб доставки" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="131.0" layoutY="65.0" text="Дані про відправника" textFill="#596455">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="680.0" layoutY="65.0" text="Дані про отримувача" textFill="#596455">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="327.0" layoutY="14.0" text="Створення заявки на доставку" textFill="#abcdef">
+            <font>
+                <Font name="Bookman Old Style" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="34.0" layoutY="188.0" text="Поштовий індекс відправника" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="555.0" layoutY="190.0" text="Поштовий індекс отримувача" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="36.0" layoutY="267.0" text="Вага посилки, кг" textAlignment="CENTER" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="36.0" layoutY="308.0" text="Висота, довжина, ширина, см" textAlignment="CENTER"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="434.0" layoutY="401.0" text="Вартість:" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label fx:id="vartist" layoutX="526.0" layoutY="397.0" text="0 грн" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="18.0"/>
+            </font>
+        </Label>
+        <ChoiceBox fx:id="chosePaym" layoutX="786.0" layoutY="266.0" prefHeight="30.0" prefWidth="175.0"
+                   style="-fx-font-family: Bookman Old Style; -fx-font-size: 14px;" value="Готівка">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Готівка"/>
+                    <String fx:value="Електронна оплата"/>
+                </FXCollections>
+            </items>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </ChoiceBox>
+        <ChoiceBox fx:id="choseDeliv" layoutX="786.0" layoutY="307.0" prefHeight="30.0" prefWidth="175.0"
+                   style="-fx-font-family: Bookman Old Style; -fx-font-size: 14px;" value="Кур`єром">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Кур`єром"/>
+                    <String fx:value="На відділення пошти"/>
+                </FXCollections>
+            </items>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </ChoiceBox>
+        <CheckBox fx:id="isHurry" layoutX="275.0" layoutY="345.0" mnemonicParsing="false" text="Термінова доставка"
+                  textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </CheckBox>
+    </AnchorPane>
+    <Label layoutX="556.0" layoutY="27.0" prefHeight="51.0" prefWidth="424.0" text="Request for delivery"
+           textFill="#3c4d5b">
+        <font>
+            <Font name="Norse" size="50.0"/>
+        </font>
+    </Label>
+</Pane>

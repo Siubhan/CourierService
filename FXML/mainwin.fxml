@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ABCDEF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainControl">
+    <children>
+        <AnchorPane layoutX="-5.0" layoutY="100.0" prefHeight="524.0" prefWidth="1018.0"
+                    style="-fx-background-color: #FFFFFF;">
+            <Pane layoutX="245.0" layoutY="62.0" prefHeight="430.0" prefWidth="773.0">
+                <TableView fx:id="tableDost" layoutX="11.0" layoutY="15.0" prefHeight="400.0" prefWidth="731.0"
+                           style="-fx-font-family: Bookman Old Style;">
+                    <columns>
+                        <TableColumn fx:id="pibOtr" prefWidth="118.0" text="ПІБ отримувача"/>
+                        <TableColumn fx:id="adrOtr" prefWidth="178.0" text="Адреса отримувача"/>
+                        <TableColumn fx:id="typVidpr" minWidth="0.0" prefWidth="97.0"
+                                     style="-fx-font-family: Bookman Old Style;" text="Тип відправки"/>
+                        <TableColumn fx:id="dataVidpr" prefWidth="99.0" text="Дата відправки"/>
+                        <TableColumn fx:id="stanVidpr" prefWidth="92.0" text="Стан доставки"/>
+                        <TableColumn fx:id="dataDost" prefWidth="98.0" text="Дата доставки"/>
+                        <TableColumn fx:id="vartis" maxWidth="200.0" minWidth="0.0" prefWidth="92.0"
+                                     text="Вартість, грн"/>
+                    </columns>
+                </TableView>
+            </Pane>
+            <Pane layoutX="25.0" layoutY="85.0" prefHeight="400.0" prefWidth="215.0"
+                  style="-fx-border-style: dashed; -fx-border-width: 2px; -fx-border-color: #d3e9f0;">
+                <ChoiceBox fx:id="listStaniv" layoutX="20.0" layoutY="80.0" prefHeight="25.0" prefWidth="168.0"
+                           style="-fx-font-family: Bookman Old Style; -fx-font-size: 15px;" value="В обробці">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="В обробці"/>
+                            <String fx:value="Доставлено"/>
+                            <String fx:value="Доставляється"/>
+                        </FXCollections>
+                    </items>
+
+                </ChoiceBox>
+                <Label layoutX="61.0" prefHeight="50.0" prefWidth="108.0" text="Пошук:" textFill="#3c4d5b">
+                    <font>
+                        <Font name="Bookman Old Style" size="24.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="declineSearch" layoutX="4.0" layoutY="350.0" mnemonicParsing="false"
+                        prefHeight="35.0" prefWidth="87.0"
+                        style="-fx-background-color: #D0F0C0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #D0F0C0;"
+                        text="Скасувати" textFill="#596455">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <font>
+                        <Font name="Bookman Old Style" size="11.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="findSearch" layoutX="121.0" layoutY="350.0" mnemonicParsing="false" prefHeight="35.0"
+                        prefWidth="87.0"
+                        style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                        text="Знайти" textFill="#596468">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <font>
+                        <Font name="Bookman Old Style" size="11.0"/>
+                    </font>
+                </Button>
+                <RadioButton fx:id="searchStan" layoutX="20.0" layoutY="50.0" mnemonicParsing="false"
+                             text="За станом доставки:" textFill="#3c4d5b">
+                    <font>
+                        <Font name="Bookman Old Style" size="15.0"/>
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="searchOtrym" layoutX="20.0" layoutY="120.0" mnemonicParsing="false"
+                             text="За отримувачем:" textFill="#3c4d5b">
+                    <font>
+                        <Font name="Bookman Old Style" size="14.0"/>
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="searchDate" layoutX="20.0" layoutY="190.0" mnemonicParsing="false"
+                             text="За датою доставки:" textFill="#3c4d5b">
+                    <font>
+                        <Font name="Bookman Old Style" size="14.0"/>
+                    </font>
+                </RadioButton>
+                <DatePicker fx:id="fieldDate" layoutX="20.0" layoutY="220.0"
+                            style="fx-font-family: Bookman Old Style;"/>
+                <TextField fx:id="fieldOtrym" layoutX="20.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0">
+                    <font>
+                        <Font name="Bookman Old Style" size="14.0"/>
+                    </font>
+                </TextField>
+            </Pane>
+            <Button fx:id="newZayavka" layoutX="266.0" layoutY="29.0" mnemonicParsing="false" prefHeight="35.0"
+                    prefWidth="180.0"
+                    style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                    text="Створити нову заявку" textFill="#596468">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <font>
+                    <Font name="Bookman Old Style" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="calcDost" layoutX="770.0" layoutY="29.0" mnemonicParsing="false" prefHeight="35.0"
+                    prefWidth="215.0"
+                    style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                    text="Розрахувати вартість доставки" textFill="#596468">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <font>
+                    <Font name="Bookman Old Style" size="12.0"/>
+                </font>
+            </Button>
+        </AnchorPane>
+        <Button fx:id="leaveSys" layoutX="845.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #D0F0C0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #D0F0C0;" text="Покинути профіль" textFill="#596455">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Bookman Old Style" size="12.0" />
+            </font>
+        </Button>
+      <Label layoutX="89.0" layoutY="-25.0" prefHeight="170.0" prefWidth="363.0" text="Courier service &quot;Von&quot;" textAlignment="CENTER" textFill="#3c4d5b">
+         <font>
+            <Font name="Norse" size="50.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

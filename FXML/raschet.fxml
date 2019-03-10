@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
+      prefWidth="750.0" style="-fx-background-color: #ABCDEF;" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="SumControl">
+    <AnchorPane layoutY="81.0" prefHeight="387.0" prefWidth="770.0" style="-fx-background-color: #FFFFFF;">
+        <Label layoutX="40.0" layoutY="110.0" prefHeight="17.0" prefWidth="97.0" text="Висота, см"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="150.0" prefHeight="17.0" prefWidth="97.0" text="Ширина, см"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="190.0" prefHeight="17.0" prefWidth="107.0" text="Довжина, см"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="dovzhina" layoutX="188.0" layoutY="186.0" prefHeight="30.0" prefWidth="100.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="shirina" layoutX="188.0" layoutY="144.0" prefHeight="30.0" prefWidth="100.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="visota" layoutX="188.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="vaga" layoutX="614.0" layoutY="104.0" prefHeight="30.0" prefWidth="100.0">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </TextField>
+        <Label layoutX="464.0" layoutY="110.0" prefHeight="17.0" prefWidth="138.0" text="Фактична вага, кг"
+               textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Label>
+        <RadioButton fx:id="useWeight" layoutX="40.0" layoutY="70.0" mnemonicParsing="false"
+                     text="За об'ємною вагою" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="useFact" layoutX="464.0" layoutY="70.0" mnemonicParsing="false" prefHeight="19.0"
+                     prefWidth="215.0" text="За  фактичною вагою" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </RadioButton>
+        <Label layoutX="322.0" layoutY="248.0" text="Вартість:" textFill="#424d47">
+            <font>
+                <Font name="Bookman Old Style" size="18.0"/>
+            </font>
+        </Label>
+        <Label fx:id="vartist" layoutX="413.0" layoutY="245.0" text="0 грн" textFill="#3c4d5b">
+            <font>
+                <Font name="Bookman Old Style" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="176.0" layoutY="14.0" text="Попередній розрахунок вартості доставки" textFill="#abcdef">
+            <font>
+                <Font name="Bookman Old Style" size="22.0"/>
+            </font>
+        </Label>
+        <Button fx:id="calculate" layoutX="601.0" layoutY="290.0" mnemonicParsing="false" prefHeight="40.0"
+                prefWidth="125.0"
+                style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                text="Розрахувати" textFill="#596468">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="createNewZay" layoutX="294.0" layoutY="290.0" mnemonicParsing="false" prefHeight="40.0"
+                prefWidth="200.0"
+                style="-fx-background-color: #D0F0C0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #D0F0C0;"
+                text="Створити нову заявку" textFill="#596455">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="backMenu" layoutX="45.0" layoutY="290.0" mnemonicParsing="false" prefHeight="40.0"
+                prefWidth="125.0"
+                style="-fx-background-color: #d3e9f0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 4; -fx-border-style: solid; -fx-border-color: #d3e9f0;"
+                text="Назад" textFill="#596468">
+            <font>
+                <Font name="Bookman Old Style" size="14.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+    <Label layoutX="400.0" layoutY="14.0" prefHeight="60.0" prefWidth="336.0" text="Price calculation"
+           textFill="#3c4d5b">
+        <font>
+            <Font name="Norse" size="52.0"/>
+        </font>
+    </Label>
+</Pane>
